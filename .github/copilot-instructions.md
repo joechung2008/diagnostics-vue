@@ -32,6 +32,8 @@
 - **Navigation links:** Use `KeyedNavLink` (see `types.ts`) for extension navigation.
 - **Component communication:** Props are passed explicitly; no Vuex or global state.
 - **Testing:** Unit tests are expected in `src/__tests__/` (not shown, but referenced in ESLint config).
+  - App component tests use Vitest snapshots (`toMatchSnapshot()`), with snapshots stored in `src/__tests__/__snapshots__/App.spec.ts.snap`.
+  - The `when` helper in `src/utils.ts` is covered by unit tests in `src/__tests__/utils.spec.ts`.
 
 ## Integration Points
 
