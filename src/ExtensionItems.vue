@@ -11,7 +11,7 @@ const links = computed(() =>
 </script>
 
 <template>
-  <v-list class="extension-root-common" aria-label="Extensions">
+  <v-list aria-label="Extensions">
     <v-list-item v-for="link in links" :key="link.key">
       <v-btn
         block

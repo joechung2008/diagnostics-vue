@@ -1,7 +1,7 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`App.vue > renders tabs 1`] = `
-"<div data-v-7a7a37b1="" class="v-application v-theme--light v-layout v-layout--full-height v-locale--is-ltr">
+"<div data-v-7a7a37b1="" class="v-application v-theme--light v-layout v-layout--full-height v-locale--is-ltr flexbox">
   <div class="v-application__wrap">
     <header data-v-7a7a37b1="" class="v-toolbar v-toolbar--density-default v-theme--light v-locale--is-ltr">
       <!---->
@@ -44,42 +44,42 @@ exports[`App.vue > renders tabs 1`] = `
       <!---->
     </div>
     <!---->
-    <div data-v-7a7a37b1="" class="v-window v-theme--light">
-      <div class="v-window__container">
-        <transition-stub data-v-7a7a37b1="" name="" appear="false" persisted="false" css="true">
-          <div class="v-window-item v-window-item--active">
-            <div data-v-7a7a37b1="">
+    <div data-v-7a7a37b1="" class="tab-panel">
+      <div data-v-7a7a37b1="" class="v-window v-theme--light">
+        <div class="v-window__container">
+          <transition-stub data-v-7a7a37b1="" name="" appear="false" persisted="false" css="true">
+            <div class="v-window-item v-window-item--active">
               <div data-v-7a7a37b1="" class="stack">
-                <div data-v-7a7a37b1="">
+                <div data-v-7a7a37b1="" class="extensions">
                   <!--v-if-->
                 </div>
-                <div data-v-7a7a37b1="" class="grow">
+                <div data-v-7a7a37b1="" class="extension">
                   <!--v-if-->
                 </div>
               </div>
             </div>
-          </div>
-        </transition-stub>
-        <transition-stub data-v-7a7a37b1="" name="" appear="false" persisted="false" css="true">
-          <div class="v-window-item" style="display: none;">
-            <!---->
-          </div>
-        </transition-stub>
-        <transition-stub data-v-7a7a37b1="" name="" appear="false" persisted="false" css="true">
-          <div class="v-window-item" style="display: none;">
-            <!---->
-          </div>
-        </transition-stub>
+          </transition-stub>
+          <transition-stub data-v-7a7a37b1="" name="" appear="false" persisted="false" css="true">
+            <div class="v-window-item" style="display: none;">
+              <!---->
+            </div>
+          </transition-stub>
+          <transition-stub data-v-7a7a37b1="" name="" appear="false" persisted="false" css="true">
+            <div class="v-window-item" style="display: none;">
+              <!---->
+            </div>
+          </transition-stub>
+          <!---->
+        </div>
         <!---->
       </div>
-      <!---->
     </div>
   </div>
 </div>"
 `;
 
 exports[`App.vue > renders without crashing 1`] = `
-"<div data-v-7a7a37b1="" class="v-application v-theme--light v-layout v-layout--full-height v-locale--is-ltr">
+"<div data-v-7a7a37b1="" class="v-application v-theme--light v-layout v-layout--full-height v-locale--is-ltr flexbox">
   <div class="v-application__wrap">
     <header data-v-7a7a37b1="" class="v-toolbar v-toolbar--density-default v-theme--light v-locale--is-ltr">
       <!---->
@@ -122,35 +122,35 @@ exports[`App.vue > renders without crashing 1`] = `
       <!---->
     </div>
     <!---->
-    <div data-v-7a7a37b1="" class="v-window v-theme--light">
-      <div class="v-window__container">
-        <transition-stub data-v-7a7a37b1="" name="" appear="false" persisted="false" css="true">
-          <div class="v-window-item v-window-item--active">
-            <div data-v-7a7a37b1="">
+    <div data-v-7a7a37b1="" class="tab-panel">
+      <div data-v-7a7a37b1="" class="v-window v-theme--light">
+        <div class="v-window__container">
+          <transition-stub data-v-7a7a37b1="" name="" appear="false" persisted="false" css="true">
+            <div class="v-window-item v-window-item--active">
               <div data-v-7a7a37b1="" class="stack">
-                <div data-v-7a7a37b1="">
+                <div data-v-7a7a37b1="" class="extensions">
                   <!--v-if-->
                 </div>
-                <div data-v-7a7a37b1="" class="grow">
+                <div data-v-7a7a37b1="" class="extension">
                   <!--v-if-->
                 </div>
               </div>
             </div>
-          </div>
-        </transition-stub>
-        <transition-stub data-v-7a7a37b1="" name="" appear="false" persisted="false" css="true">
-          <div class="v-window-item" style="display: none;">
-            <!---->
-          </div>
-        </transition-stub>
-        <transition-stub data-v-7a7a37b1="" name="" appear="false" persisted="false" css="true">
-          <div class="v-window-item" style="display: none;">
-            <!---->
-          </div>
-        </transition-stub>
+          </transition-stub>
+          <transition-stub data-v-7a7a37b1="" name="" appear="false" persisted="false" css="true">
+            <div class="v-window-item" style="display: none;">
+              <!---->
+            </div>
+          </transition-stub>
+          <transition-stub data-v-7a7a37b1="" name="" appear="false" persisted="false" css="true">
+            <div class="v-window-item" style="display: none;">
+              <!---->
+            </div>
+          </transition-stub>
+          <!---->
+        </div>
         <!---->
       </div>
-      <!---->
     </div>
   </div>
 </div>"

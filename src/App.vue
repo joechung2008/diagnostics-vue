@@ -92,7 +92,7 @@ const selectExtension = (key: string) => {
 </script>
 
 <template>
-  <v-app>
+  <v-app class="flexbox">
     <v-toolbar>
       <v-menu v-model="menuOpen">
         <template #activator="{ props }">
@@ -132,52 +132,85 @@ const selectExtension = (key: string) => {
       <v-tab value="build">Build Information</v-tab>
       <v-tab value="server">Server Information</v-tab>
     </v-tabs>
-    <v-window v-model="selectedTab">
-      <v-window-item value="extensions">
-        <div>
+    <div class="tab-panel">
+      <v-window v-model="selectedTab">
+        <v-window-item value="extensions">
           <div class="stack">
-            <div>
+            <div class="extensions">
               <ExtensionItems
                 v-if="diagnostics?.extensions"
                 :extensions="diagnostics.extensions"
                 :onLinkClick="handleLinkClick"
               />
             </div>
-            <div class="grow">
+            <div class="extension">
               <ExtensionItem v-if="extension" v-bind="extension" />
             </div>
           </div>
-        </div>
-      </v-window-item>
-      <v-window-item value="build">
-        <div>
+        </v-window-item>
+        <v-window-item value="build">
           <BuildInfoTable v-if="diagnostics?.buildInfo" v-bind="diagnostics.buildInfo" />
-        </div>
-      </v-window-item>
-      <v-window-item value="server">
-        <div>
+        </v-window-item>
+        <v-window-item value="server">
           <ServerInfoTable v-if="diagnostics?.serverInfo" v-bind="diagnostics.serverInfo" />
-        </div>
-      </v-window-item>
-    </v-window>
+        </v-window-item>
+      </v-window>
+    </div>
   </v-app>
 </template>
 
+<style>
+html,
+body,
+#app {
+  height: 100%;
+  overflow-y: hidden !important;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+</style>
+
 <style scoped>
+:deep(.v-window),
+:deep(.v-window-item) {
+  height: 100%;
+  overflow-y: hidden !important;
+}
+
+.extension,
+.extensions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-height: max-content;
+  overflow-y: auto;
+  padding: 0.25rem;
+}
+
+.extension {
+  flex-grow: 1;
+}
+
+.flexbox > :deep(.v-application__wrap) {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 .stack {
   display: flex;
   flex-direction: row;
   gap: 1rem;
+  height: 100%;
 }
 
-.grow {
-  flex-grow: 1;
-}
-
-.extension-root-common {
-  display: flex;
-  flex-direction: column;
-  max-height: calc(100vh - 124px);
+.tab-panel {
+  box-sizing: border-box;
+  flex: 1;
   overflow-y: auto;
 }
 </style>

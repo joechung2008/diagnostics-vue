@@ -1,7 +1,7 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`ExtensionItems > renders extension buttons 1`] = `
-"<div class="v-list v-theme--light v-list--density-default v-list--one-line extension-root-common" tabindex="0" role="listbox" aria-label="Extensions">
+"<div class="v-list v-theme--light v-list--density-default v-list--one-line" tabindex="0" role="listbox" aria-label="Extensions">
   <div class="v-list-item v-theme--light v-list-item--density-default v-list-item--one-line rounded-0 v-list-item--variant-text">
     <!----><span class="v-list-item__underlay"></span>
     <!---->
