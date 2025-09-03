@@ -193,6 +193,10 @@ body {
   flex-grow: 1;
 }
 
+.flexbox {
+  height: 100%;
+}
+
 .flexbox > ::deep(.v-application__wrap) {
   display: flex;
   flex-direction: column;
