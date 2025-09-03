@@ -132,9 +132,9 @@ const selectExtension = (key: string) => {
       <v-tab value="build">Build Information</v-tab>
       <v-tab value="server">Server Information</v-tab>
     </v-tabs>
-    <v-window v-model="selectedTab">
-      <v-window-item value="extensions">
-        <div class="tab-panel">
+    <div class="tab-panel">
+      <v-window v-model="selectedTab">
+        <v-window-item value="extensions">
           <div class="stack">
             <div class="extensions">
               <ExtensionItems
@@ -147,19 +147,15 @@ const selectExtension = (key: string) => {
               <ExtensionItem v-if="extension" v-bind="extension" />
             </div>
           </div>
-        </div>
-      </v-window-item>
-      <v-window-item value="build">
-        <div class="tab-panel">
+        </v-window-item>
+        <v-window-item value="build">
           <BuildInfoTable v-if="diagnostics?.buildInfo" v-bind="diagnostics.buildInfo" />
-        </div>
-      </v-window-item>
-      <v-window-item value="server">
-        <div class="tab-panel">
+        </v-window-item>
+        <v-window-item value="server">
           <ServerInfoTable v-if="diagnostics?.serverInfo" v-bind="diagnostics.serverInfo" />
-        </div>
-      </v-window-item>
-    </v-window>
+        </v-window-item>
+      </v-window>
+    </div>
   </v-app>
 </template>
 
@@ -178,6 +174,11 @@ body {
 </style>
 
 <style scoped>
+:deep(.v-window),
+:deep(.v-window-item) {
+  height: 100%;
+}
+
 .extension,
 .extensions {
   display: flex;
@@ -190,6 +191,12 @@ body {
 
 .extension {
   flex-grow: 1;
+}
+
+.flexbox > ::deep(.v-application__wrap) {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .stack {
