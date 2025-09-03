@@ -132,27 +132,32 @@ const selectExtension = (key: string) => {
       <v-tab value="build">Build Information</v-tab>
       <v-tab value="server">Server Information</v-tab>
     </v-tabs>
-    <div class="tab-panel">
       <v-window v-model="selectedTab">
         <v-window-item value="extensions">
-          <div class="stack">
-            <div class="extensions">
-              <ExtensionItems
-                v-if="diagnostics?.extensions"
-                :extensions="diagnostics.extensions"
-                :onLinkClick="handleLinkClick"
-              />
-            </div>
-            <div class="extension">
-              <ExtensionItem v-if="extension" v-bind="extension" />
+          <div class="tab-panel">
+            <div class="stack">
+              <div class="extensions">
+                <ExtensionItems
+                  v-if="diagnostics?.extensions"
+                  :extensions="diagnostics.extensions"
+                  :onLinkClick="handleLinkClick"
+                />
+              </div>
+              <div class="extension">
+                <ExtensionItem v-if="extension" v-bind="extension" />
+              </div>
             </div>
           </div>
         </v-window-item>
         <v-window-item value="build">
-          <BuildInfoTable v-if="diagnostics?.buildInfo" v-bind="diagnostics.buildInfo" />
+          <div class="tab-panel">
+            <BuildInfoTable v-if="diagnostics?.buildInfo" v-bind="diagnostics.buildInfo" />
+          </div>
         </v-window-item>
         <v-window-item value="server">
-          <ServerInfoTable v-if="diagnostics?.serverInfo" v-bind="diagnostics.serverInfo" />
+          <div class="tab-panel">
+            <ServerInfoTable v-if="diagnostics?.serverInfo" v-bind="diagnostics.serverInfo" />
+          </div>
         </v-window-item>
       </v-window>
     </div>
@@ -164,7 +169,6 @@ html,
 body,
 #app {
   height: 100%;
-  overflow-y: hidden !important;
 }
 
 html,
@@ -175,12 +179,6 @@ body {
 </style>
 
 <style scoped>
-:deep(.v-window),
-:deep(.v-window-item) {
-  height: 100%;
-  overflow-y: hidden !important;
-}
-
 .extension,
 .extensions {
   display: flex;
@@ -193,12 +191,6 @@ body {
 
 .extension {
   flex-grow: 1;
-}
-
-.flexbox > :deep(.v-application__wrap) {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
 }
 
 .stack {
