@@ -1,28 +1,8 @@
 {
-  "name": "diagnostics-vue",
-  "version": "0.0.0",
-  "private": true,
-  "type": "module",
-  "engines": {
-    "node": "^20.19.0 || >=22.12.0"
-  },
-  "scripts": {
-    "build": "run-p type-check \"build-only {@}\" --",
-    "build-only": "vite build",
-    "dev": "vite",
-    "format": "prettier --write .",
-    "lint": "npm-run-all lint:*",
-    "lint:eslint": "eslint --concurrency=auto .",
-    "lint:prettier": "prettier --check .",
-    "preview": "vite preview",
-    "test": "vitest run",
-    "test:coverage": "vitest run --coverage --passWithNoTests",
-    "type-check": "vue-tsc --build"
-  },
   "dependencies": {
     "@mdi/font": "^7.4.47",
     "vue": "^3.5.21",
-    "vuetify": "^3.9.7",
+    "vuetify": "^3.10.0",
     "web-vitals": "^5.1.0"
   },
   "devDependencies": {
@@ -50,5 +30,25 @@
     "vite-plugin-vuetify": "^2.1.2",
     "vitest": "^3.2.4",
     "vue-tsc": "^3.0.6"
-  }
+  },
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
+  "name": "diagnostics-vue",
+  "private": true,
+  "scripts": {
+    "build": "run-p type-check \"build-only {@}\" --",
+    "build-only": "vite build",
+    "dev": "vite",
+    "format": "prettier --write .",
+    "lint": "npm-run-all lint:*",
+    "lint:eslint": "eslint --concurrency=auto .",
+    "lint:prettier": "prettier --check .",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage --passWithNoTests",
+    "type-check": "vue-tsc --build"
+  },
+  "type": "module",
+  "version": "0.0.0"
 }

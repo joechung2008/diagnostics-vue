@@ -2,7 +2,7 @@
 
 exports[`ExtensionItems > renders extension buttons 1`] = `
 "<nav class="v-list v-theme--light v-list--density-default v-list--one-line" tabindex="0" role="navigation" aria-label="Extensions">
-  <div class="v-list-item v-theme--light v-list-item--density-default v-list-item--one-line rounded-0 v-list-item--variant-text">
+  <div class="v-list-item v-theme--light v-list-item--density-default v-list-item--one-line rounded-0 v-list-item--variant-text" role="listitem">
     <!----><span class="v-list-item__underlay"></span>
     <!---->
     <div class="v-list-item__content" data-no-activator="">
@@ -15,7 +15,7 @@ exports[`ExtensionItems > renders extension buttons 1`] = `
     </div>
     <!---->
   </div>
-  <div class="v-list-item v-theme--light v-list-item--density-default v-list-item--one-line rounded-0 v-list-item--variant-text">
+  <div class="v-list-item v-theme--light v-list-item--density-default v-list-item--one-line rounded-0 v-list-item--variant-text" role="listitem">
     <!----><span class="v-list-item__underlay"></span>
     <!---->
     <div class="v-list-item__content" data-no-activator="">
